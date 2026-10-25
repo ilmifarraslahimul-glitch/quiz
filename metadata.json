@@ -1,0 +1,6 @@
+{
+  "name": "QuizKu",
+  "description": "Aplikasi game edukasi interaktif pembuat dan latihan quiz cerdas dengan AI, timer vertikal, dan sinkronisasi cloud.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

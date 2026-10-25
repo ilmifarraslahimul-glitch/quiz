@@ -1,0 +1,33 @@
+{
+  "id": "/",
+  "name": "QuizKu — Game Edukasi Quiz",
+  "short_name": "QuizKu",
+  "description": "Aplikasi game latihan quiz interaktif cerdas dengan AI, timer vertikal, dan kustomisasi soal.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#4f46e5",
+  "background_color": "#0f172a",
+  "categories": ["education", "games"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

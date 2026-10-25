@@ -1,0 +1,141 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information and aggregate statistics",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 100 },
+        "email": { "type": "string", "maxLength": 150 },
+        "photoURL": { "type": "string", "maxLength": 500 },
+        "streak": { "type": "number" },
+        "lastActiveDate": { "type": "string", "maxLength": 30 },
+        "totalPlayed": { "type": "number" },
+        "totalCorrect": { "type": "number" },
+        "totalIncorrect": { "type": "number" },
+        "bestScore": { "type": "number" },
+        "createdAt": { "type": "string", "maxLength": 50 },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["uid", "displayName"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Customizable quiz category",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "name": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 },
+        "icon": { "type": "string", "maxLength": 50 },
+        "color": { "type": "string", "maxLength": 30 },
+        "defaultDuration": { "type": "number" },
+        "defaultQuestionsPerSession": { "type": "number" },
+        "defaultDifficulty": { "type": "string", "maxLength": 20 },
+        "pointsPerQuestion": { "type": "number" },
+        "order": { "type": "number" },
+        "isArchived": { "type": "boolean" },
+        "isFavorite": { "type": "boolean" },
+        "createdAt": { "type": "string", "maxLength": 50 },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "userId", "name"]
+    },
+    "Question": {
+      "title": "Question",
+      "description": "Quiz question record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "categoryId": { "type": "string", "maxLength": 128 },
+        "question": { "type": "string", "maxLength": 2000 },
+        "questionType": { "type": "string", "maxLength": 30 },
+        "options": { "type": "array" },
+        "correctAnswer": { "type": "string", "maxLength": 500 },
+        "explanation": { "type": "string", "maxLength": 2000 },
+        "duration": { "type": "number" },
+        "difficulty": { "type": "string", "maxLength": 20 },
+        "points": { "type": "number" },
+        "imageUrl": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string", "maxLength": 50 },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "userId", "categoryId", "question", "correctAnswer"]
+    },
+    "QuizHistory": {
+      "title": "QuizHistory",
+      "description": "Completed quiz session history",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "categoryId": { "type": "string", "maxLength": 128 },
+        "categoryName": { "type": "string", "maxLength": 100 },
+        "totalQuestions": { "type": "number" },
+        "correctAnswers": { "type": "number" },
+        "incorrectAnswers": { "type": "number" },
+        "unanswered": { "type": "number" },
+        "score": { "type": "number" },
+        "maxScore": { "type": "number" },
+        "accuracy": { "type": "number" },
+        "totalDurationSeconds": { "type": "number" },
+        "averageTimePerQuestion": { "type": "number" },
+        "mode": { "type": "string", "maxLength": 30 },
+        "completedAt": { "type": "string", "maxLength": 50 },
+        "items": { "type": "array" }
+      },
+      "required": ["id", "userId", "categoryId", "totalQuestions", "score", "accuracy"]
+    },
+    "UserSettings": {
+      "title": "UserSettings",
+      "description": "User display and game preferences",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "maxLength": 128 },
+        "themePreset": { "type": "string", "maxLength": 30 },
+        "customColor": { "type": "string", "maxLength": 30 },
+        "customAccent": { "type": "string", "maxLength": 30 },
+        "colorMode": { "type": "string", "maxLength": 20 },
+        "soundEnabled": { "type": "boolean" },
+        "soundVolume": { "type": "number" },
+        "bgMusicEnabled": { "type": "boolean" },
+        "animationEnabled": { "type": "boolean" },
+        "simpleAnimation": { "type": "boolean" },
+        "instantFeedback": { "type": "boolean" },
+        "autoNextDelay": { "type": "number" },
+        "verticalTimer": { "type": "boolean" },
+        "confirmExit": { "type": "boolean" },
+        "shuffleQuestions": { "type": "boolean" },
+        "shuffleOptions": { "type": "boolean" },
+        "dailyGoal": { "type": "number" },
+        "updatedAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["userId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "UserProfile" },
+      "description": "User profiles and aggregated statistics"
+    },
+    "/users/{userId}/categories/{categoryId}": {
+      "schema": { "$ref": "Category" },
+      "description": "User customizable quiz categories"
+    },
+    "/users/{userId}/questions/{questionId}": {
+      "schema": { "$ref": "Question" },
+      "description": "Quiz questions belonging to the user"
+    },
+    "/users/{userId}/history/{historyId}": {
+      "schema": { "$ref": "QuizHistory" },
+      "description": "Historical quiz attempts and results"
+    },
+    "/users/{userId}/settings/{settingId}": {
+      "schema": { "$ref": "UserSettings" },
+      "description": "User app settings and gameplay configuration"
+    }
+  }
+}

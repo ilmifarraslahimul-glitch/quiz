@@ -1,0 +1,782 @@
+# PROMPT PEMBUATAN WEBSITE GAME QUIZ AI — QUIZKU
+
+Buat sebuah website berbentuk aplikasi game edukasi interaktif bernama **QuizKu**, yaitu platform latihan quiz yang memungkinkan pengguna membuat soal sendiri, mengatur kategori, menentukan durasi pengerjaan, serta menggunakan bantuan AI untuk membuat dan mengembangkan soal secara otomatis.
+
+Website harus memiliki tampilan modern, estetik, ceria, penuh animasi yang halus, dan terasa seperti game edukasi profesional. Website bukan sekadar kumpulan formulir atau halaman soal biasa, melainkan sebuah aplikasi game yang menyenangkan untuk digunakan setiap hari.
+
+Buat website yang benar-benar berfungsi, bukan hanya desain atau prototype. Semua tombol, navigasi, penyimpanan data, sistem quiz, timer, AI, pengaturan, dan fitur lainnya harus berjalan dengan baik.
+
+## 1. Konsep dan Identitas Website
+
+- Nama aplikasi: **QuizKu**
+- Tagline: *Play. Think. Level Up!*
+- Identitas: game quiz edukasi yang dapat dikustomisasi oleh pengguna.
+- Tulisan pada halaman Tentang: **Web by Rasfarilmi**
+- Logo utama berbentuk tanda tanya yang dipadukan dengan elemen quiz, seperti kartu soal, bintang, atau simbol jawaban.
+- Buat logo yang unik, mudah dikenali, modern, dan cocok dijadikan ikon aplikasi.
+- Gunakan desain yang ceria, dengan warna yang harmonis, animasi lucu, efek visual menarik, serta tampilan yang tidak monoton.
+- Hindari desain yang terlalu ramai, terlalu banyak dekorasi, atau membuat pengguna sulit fokus mengerjakan soal.
+
+Gunakan font modern yang mudah dibaca, sudut komponen membulat, bayangan lembut, ikon yang konsisten, dan transisi ant halaman yang mulus.
+
+## 2. Struktur Halaman dan Navigasi
+
+Buat navigasi dengan urutan berikut:
+
+1. Beranda
+2. Play / Latihan Quiz
+3. Koleksi Quiz
+4. Buat dan Kelola Soal
+5. AI Quiz Generator
+6. Statistik dan Riwayat
+7. Pengaturan
+8. Tentang QuizKu
+
+Pada desktop, gunakan sidebar modern yang dapat diperkecil agar area konten tetap luas.
+
+Pada HP, gunakan navigasi yang ringkas dan nyaman, seperti menu samping atau menu hamburger. Hindari bottom navigation yang terlalu besar dan memakan ruang.
+
+Pastikan semua halaman memiliki navigasi yang konsisten dan pengguna bisa kembali ke halaman sebelumnya dengan mudah.
+
+## 3. Halaman Beranda
+
+Halaman pertama yang muncul ketika website dibuka harus terasa seperti halaman utama sebuah game.
+
+Tampilkan:
+
+- Logo QuizKu.
+- Sapaan animasi seperti "Hello, Quiz Master!" atau "Ready to Play?"
+- Tombol **PLAY** berukuran besar sebagai fokus utama.
+- Tombol atau menu **Settings**.
+- Tombol **Buat Quiz**.
+- Tombol **Koleksi Quiz**.
+- Tombol **Tentang QuizKu**.
+- Ringkasan aktivitas pengguna.
+- Jumlah quiz yang tersedia.
+- Jumlah soal yang sudah dikerjakan.
+- Total jawaban benar dan salah.
+- Skor terbaik.
+- Streak latihan atau jumlah hari berturut-turut belajar.
+- Tombol melanjutkan quiz terakhir jika tersedia.
+
+Tambahkan animasi karakter maskot quiz yang lucu, misalnya karakter tanda tanya yang bergerak, melompat kecil, berkedip, atau bereaksi ketika pengguna berinteraksi.
+
+Animasi harus terasa hidup, tetapi jangan mengganggu aktivitas utama.
+
+## 4. Sistem Play dan Pemilihan Quiz
+
+Ketika pengguna menekan tombol **PLAY**, arahkan langsung ke halaman latihan quiz.
+
+Di halaman tersebut, tampilkan daftar kategori quiz dalam bentuk kartu game yang menarik.
+
+Contoh kategori awal:
+
+- Perkalian Dasar
+- Pembagian
+- Penjumlahan dan Pengurangan
+- Pecahan
+- Aljabar
+- Persamaan Linear
+- Logika
+- Pengetahuan Umum
+
+Kategori di atas hanya contoh. Pengguna harus dapat menambah, mengganti nama, mengubah ikon, mengatur warna, dan menghapus kategori sendiri.
+
+Setiap kartu kategori menampilkan:
+
+- Nama kategori.
+- Ikon atau ilustrasi.
+- Jumlah soal yang tersedia.
+- Durasi pengerjaan.
+- Jumlah soal yang akan dikerjakan.
+- Skor terbaik.
+- Status latihan atau progres.
+
+Ketika pengguna memilih kategori, tampilkan halaman persiapan quiz yang berisi:
+
+- Nama kategori.
+- Jumlah soal.
+- Durasi setiap soal.
+- Informasi bahwa jawaban akan diperiksa secara langsung.
+- Tombol **PLAY** untuk memulai.
+
+Setelah tombol PLAY ditekan, tampilkan hitung mundur animasi dari angka **3, 2, 1, GO!**. Setelah hitung mundur selesai, quiz dimulai secara otomatis.
+
+Sediakan tombol kembali sebelum quiz dimulai. Jika pengguna keluar ketika quiz sedang berjalan, tampilkan konfirmasi agar progres tidak hilang secara tidak sengaja.
+
+## 5. Sistem Pengerjaan Quiz
+
+Buat sistem quiz yang responsif, interaktif, dan terasa seperti game sungguhan.
+
+Ketentuan:
+
+- Setiap kategori dapat memiliki maksimal 25 soal aktif dalam satu sesi quiz.
+- Jika kategori memiliki lebih dari 25 soal tersimpan, pengguna dapat memilih maksimal 25 soal untuk satu sesi.
+- Jika jumlah soal kurang dari 25, gunakan seluruh soal yang tersedia atau jumlah yang dipilih pengguna.
+- Jangan memulai quiz apabila kategori belum memiliki soal yang dapat dikerjakan.
+- Tampilkan satu soal dalam satu waktu.
+- Tampilkan nomor soal, misalnya 1/25.
+- Tampilkan teks soal dengan ukuran yang nyaman dibaca.
+- Tampilkan empat pilihan jawaban secara default, yaitu A, B, C, dan D.
+- Pilihan jawaban harus dapat disesuaikan jika pengguna menginginkan jumlah opsi yang berbeda.
+- Pilihan jawaban berbentuk kartu atau tombol besar yang mudah ditekan.
+- Pengguna dapat menjawab menggunakan mouse, layar sentuh, atau keyboard.
+- Setelah jawaban dipilih, periksa jawabannya secara otomatis.
+- Jangan izinkan jawaban yang sama dikirim berulang kali untuk soal yang sudah dijawab.
+- Setelah umpan balik diberikan, lanjutkan ke soal berikutnya secara otomatis dengan jeda singkat yang dapat diatur.
+
+### Umpan balik jawaban
+
+Jika jawaban benar:
+
+- Kartu jawaban berubah menjadi hijau.
+- Tampilkan animasi centang.
+- Putar sound effect keberhasilan jika suara diaktifkan.
+- Tampilkan pesan positif seperti "Correct!", "Great Job!", atau "Mantap!".
+- Tambahkan skor sesuai sistem penilaian.
+
+Jika jawaban salah:
+
+- Pilihan yang dipilih berubah menjadi merah.
+- Tampilkan animasi kesalahan yang ringan, misalnya efek shake singkat.
+- Putar sound effect kesalahan jika suara diaktifkan.
+- Tampilkan jawaban yang benar setelah pengguna menjawab.
+- Berikan penjelasan singkat jika tersedia.
+- Jangan menggunakan animasi yang terlalu berlebihan atau mengganggu.
+
+Sediakan pengaturan untuk mengaktifkan atau menonaktifkan sound effect dan umpan balik visual.
+
+## 6. Sistem Timer Per Soal
+
+Timer merupakan fitur utama yang wajib dibuat dengan baik.
+
+Setiap soal memiliki durasi sendiri yang dapat diatur oleh pengguna.
+
+Contohnya:
+- Perkalian Dasar: 10 detik per soal.
+- Aljabar: 30 detik per soal.
+- Pengetahuan Umum: 20 detik per soal.
+
+Nilai tersebut hanya contoh dan harus bisa diubah.
+
+### Desain timer vertikal
+
+Buat timer dalam bentuk indikator vertikal memanjang ke bawah atau ke atas, seperti batang energi dalam game.
+
+Ketentuan:
+
+- Pada awal soal, indikator berada pada kondisi penuh.
+- Seiring waktu berjalan, indikator semakin pendek.
+- Gunakan animasi perubahan tinggi yang halus.
+- Tampilkan sisa waktu dalam angka agar mudah dibaca.
+- Ubah warna indikator secara bertahap ketika waktu hampir habis, misalnya dari warna utama menjadi oranye lalu merah.
+- Ketika waktu habis, soal otomatis dianggap tidak dijawab dan bernilai salah sesuai aturan penilaian.
+- Sistem harus berpindah ke soal berikutnya secara otomatis.
+- Timer di-reset penuh ketika soal baru dimulai.
+- Timer tidak boleh berjalan ganda, terus berjalan setelah quiz selesai, atau menghasilkan jawaban ganda.
+- Gunakan penghitungan waktu yang akurat, bukan sekadar mengurangi angka setiap interval tanpa memperhitungkan keterlambatan browser.
+
+Tambahkan animasi peringatan yang halus ketika waktu hampir habis, misalnya indikator berdenyut singkat.
+
+## 7. Halaman Buat dan Kelola Soal
+
+Buat halaman khusus untuk mengelola seluruh soal quiz.
+
+Pengguna harus dapat membuat, menyimpan, mengedit, menduplikasi, mengarsipkan, dan menghapus soal.
+
+### Formulir penambahan soal
+
+Sediakan kolom berikut:
+
+1. Kategori soal.
+2. Judul atau nama set quiz.
+3. Teks pertanyaan.
+4. Jenis soal.
+5. Pilihan jawaban.
+6. Penanda jawaban yang benar.
+7. Penjelasan jawaban, jika diperlukan.
+8. Durasi pengerjaan per soal.
+9. Tingkat kesulitan.
+10. Poin untuk jawaban benar.
+11. Gambar pendukung, jika diperlukan.
+
+Untuk jenis soal, prioritaskan pilihan ganda dengan satu jawaban benar. Tambahkan opsi untuk mendukung soal benar/salah dan jawaban singkat jika memungkinkan. Untuk jawaban singkat, sediakan aturan pencocokan jawaban yang jelas.
+
+### Pengaturan pilihan jawaban
+
+Untuk soal pilihan ganda:
+
+- Sediakan minimal dua pilihan jawaban.
+- Gunakan empat pilihan sebagai jumlah default.
+- Setiap pilihan memiliki kolom teks.
+- Pengguna dapat menambah atau menghapus opsi.
+- Pengguna menentukan sendiri opsi yang benar.
+- Pastikan hanya jawaban yang ditetapkan sebagai benar yang dianggap benar.
+
+Contoh:
+
+Pertanyaan: Berapakah hasil dari 7 × 8?
+
+A. 48
+
+B. 54
+
+C. 56
+
+D. 64
+
+Jawaban benar: C. 56.
+
+### Fitur pengelolaan soal
+
+- Pencarian berdasarkan teks soal.
+- Filter berdasarkan kategori dan tingkat kesulitan.
+- Pengurutan berdasarkan tanggal dibuat atau diperbarui.
+- Edit soal tanpa membuat duplikat.
+- Duplikasi soal untuk membuat variasi baru.
+- Hapus soal dengan konfirmasi.
+- Pilih beberapa soal untuk dipindahkan kategori atau dihapus sekaligus.
+- Impor dan ekspor soal menggunakan format JSON atau CSV.
+- Tampilkan jumlah soal di setiap kategori.
+- Validasi agar soal tidak bisa disimpan jika pertanyaan, pilihan, kategori, atau jawaban benar yang wajib masih kosong.
+
+Simpan perubahan secara otomatis jika memungkinkan, tetapi tetap tampilkan status seperti "Menyimpan...", "Tersimpan", atau "Gagal menyimpan".
+
+## 8. Integrasi AI untuk Membantu Membuat Soal
+
+AI adalah fitur penting QuizKu.
+
+AI tidak boleh hanya menjadi hiasan. Fitur ini harus terhubung ke layanan AI melalui backend yang aman dan benar-benar dapat menghasilkan soal.
+
+### A. AI pembuat opsi jawaban
+
+Ketika pengguna memasukkan pertanyaan dan menentukan jawaban yang benar, sediakan tombol:
+
+**✨ Bantu AI Membuat Opsi**
+
+Contoh:
+
+Pertanyaan: Berapakah hasil dari 12 × 12?
+
+Jawaban benar yang dimasukkan pengguna: 144.
+
+AI kemudian menghasilkan tiga opsi salah yang masuk akal, misalnya:
+
+- 124
+- 134
+- 154
+
+Opsi yang dihasilkan harus berbeda dari jawaban benar dan tidak boleh menghasilkan pilihan duplikat.
+
+Jawaban benar harus tetap berasal dari pilihan yang ditetapkan pengguna. AI tidak boleh mengganti atau mengubahnya secara diam-diam.
+
+Setelah opsi dibuat, pengguna dapat melihat pratinjau, mengedit hasilnya, meminta regenerasi, atau menerima hasil untuk disimpan.
+
+### B. AI membuat soal baru
+
+Sediakan fitur **AI Quiz Generator**.
+
+Pengguna dapat memasukkan:
+
+- Topik.
+- Kategori tujuan.
+- Jumlah soal yang ingin dibuat, maksimal 25 soal per permintaan.
+- Tingkat kesulitan.
+- Jenis soal.
+- Jumlah opsi jawaban.
+- Durasi per soal.
+- Bahasa soal.
+- Materi atau contoh soal sebagai referensi.
+- Jawaban benar dan penjelasan jika sudah diketahui.
+
+AI kemudian membuat kumpulan soal beserta pilihan jawaban, kunci jawaban, penjelasan, tingkat kesulitan, dan durasi yang disarankan.
+
+Sebelum menyimpan, tampilkan seluruh hasil dalam halaman pratinjau agar pengguna bisa mengedit, memilih, atau membuang soal tertentu.
+
+### C. AI membuat soal yang mirip dengan soal lama
+
+Di setiap soal yang sudah tersimpan, sediakan tombol:
+
+**✨ Buat Soal Serupa dengan AI**
+
+AI mempelajari pola soal yang dipilih, seperti:
+
+- Materi yang diuji.
+- Struktur pertanyaan.
+- Tingkat kesulitan.
+- Jenis opsi jawaban.
+- Cara menghitung atau penalaran yang digunakan.
+
+Lalu buat soal baru dengan konsep serupa, tetapi menggunakan angka, konteks, atau susunan pertanyaan yang berbeda.
+
+Contohnya, jika soal lama adalah 8 × 7, AI dapat membuat soal 9 × 6 dengan tingkat kesulitan yang serupa.
+
+AI harus menghasilkan soal yang benar-benar baru, bukan sekadar menyalin soal lama dan mengganti sedikit kata.
+
+### D. AI memeriksa kualitas soal
+
+Tambahkan fitur untuk:
+
+- Memeriksa apakah jawaban benar sesuai dengan pertanyaan.
+- Mendeteksi opsi yang duplikat.
+- Mendeteksi soal yang ambigu.
+- Memperbaiki kesalahan penulisan.
+- Membuat penjelasan jawaban.
+- Menyarankan tingkat kesulitan.
+- Menandai soal yang kemungkinan memiliki lebih dari satu jawaban benar.
+
+Jangan otomatis menyimpan hasil AI sebelum pengguna menyetujuinya.
+
+### E. Keamanan AI
+
+Gunakan backend dan API AI yang sesuai. Simpan API key hanya di server atau pengelolaan rahasia yang aman, jangan pernah menaruh API key di JavaScript frontend.
+
+Sediakan indikator loading, penanganan kegagalan, pesan error yang jelas, dan pembatasan penggunaan agar tidak terjadi pemanggilan AI tanpa kendali.
+
+Jika layanan AI belum dikonfigurasi, tampilkan status bahwa fitur memerlukan konfigurasi, bukan berpura-pura telah menghasilkan soal menggunakan AI.
+
+## 9. Sistem Kategori yang Bebas Dikustomisasi
+
+Pengguna memiliki kendali penuh atas kategori quiz.
+
+Fitur yang harus tersedia:
+
+- Membuat kategori baru.
+- Mengubah nama kategori.
+- Mengubah deskripsi.
+- Memilih ikon.
+- Memilih warna kategori.
+- Menambahkan gambar sampul.
+- Menentukan durasi default per soal.
+- Menentukan jumlah soal per sesi.
+- Menentukan tingkat kesulitan default.
+- Menentukan poin jawaban benar.
+- Mengatur urutan kategori.
+- Mengarsipkan kategori.
+- Menghapus kategori dengan konfirmasi.
+
+Ketika kategori dihapus, berikan pilihan untuk memindahkan soal ke kategori lain atau menghapus soal terkait. Jangan sampai data terhapus secara tidak sengaja.
+
+Setiap soal harus memiliki hubungan yang jelas dengan kategori dan set quiz tempat soal itu disimpan.
+
+## 10. Sistem Penilaian dan Halaman Hasil
+
+Setelah seluruh soal selesai, tampilkan halaman hasil yang terasa seperti layar kemenangan game.
+
+Contoh:
+
+- Total soal: 25.
+- Benar: 20.
+- Salah: 5.
+- Tidak dijawab: 0.
+- Skor akhir: 80/100.
+- Akurasi: 80%.
+- Total waktu pengerjaan.
+- Rata-rata waktu per soal.
+- Skor terbaik kategori.
+- Perubahan skor dibandingkan percobaan sebelumnya.
+
+Gunakan sistem penilaian yang konsisten.
+
+Rumus akurasi:
+
+Akurasi = (Jumlah jawaban benar ÷ Jumlah soal yang dinilai) × 100%.
+
+Untuk skor standar 100, jika semua soal memiliki bobot yang sama:
+
+Skor = (Jumlah jawaban benar ÷ Jumlah soal) × 100.
+
+Jika pengguna mengatur bobot poin berbeda, gunakan total poin yang diperoleh dibandingkan total poin maksimal.
+
+Tampilkan animasi hasil, misalnya bintang, konfeti, maskot yang bereaksi, atau medali sesuai pencapaian. Sediakan pengaturan untuk mengurangi animasi.
+
+Tambahkan tombol:
+
+- **Main Lagi**
+- **Pilih Kategori Lain**
+- **Lihat Pembahasan**
+- **Lihat Statistik**
+
+## 11. Pembahasan Jawaban
+
+Setelah quiz selesai, sediakan halaman review yang menampilkan:
+
+- Semua pertanyaan.
+- Jawaban pengguna.
+- Jawaban yang benar.
+- Status benar atau salah.
+- Penjelasan jawaban jika tersedia.
+- Waktu yang digunakan.
+- Tombol untuk mencoba soal yang salah kembali.
+
+Gunakan warna hijau untuk jawaban benar dan merah untuk jawaban salah.
+
+Tambahkan filter "Semua", "Benar", dan "Salah".
+
+Jangan mengubah kunci jawaban soal asli hanya karena pengguna salah menjawab.
+
+## 12. Statistik dan Riwayat Quiz
+
+Buat halaman statistik dengan visualisasi yang menarik dan mudah dipahami.
+
+Tampilkan:
+
+- Total sesi quiz.
+- Total soal yang pernah dijawab.
+- Total jawaban benar dan salah.
+- Akurasi keseluruhan.
+- Skor rata-rata.
+- Skor tertinggi.
+- Kategori yang paling sering dikerjakan.
+- Kategori dengan akurasi tertinggi.
+- Riwayat hasil berdasarkan tanggal.
+- Grafik perkembangan nilai.
+- Durasi latihan.
+- Streak latihan.
+
+Sediakan filter berdasarkan tanggal dan kategori.
+
+Riwayat harus bisa dibuka untuk melihat detail setiap sesi. Pengguna juga dapat menghapus riwayat dengan konfirmasi.
+
+Bedakan statistik soal yang pernah dijawab dari jumlah soal yang tersimpan agar angka tidak membingungkan.
+
+## 13. Sistem Pengaturan Tampilan
+
+Buat halaman Settings yang memungkinkan pengguna mengubah tampilan aplikasi.
+
+### Tema warna
+
+Sediakan pilihan preset:
+
+- Biru
+- Ungu
+- Hijau
+- Oranye
+- Pink
+- Cyan
+- Hitam elegan
+- Custom Color
+
+Pada Custom Color, pengguna dapat memilih warna utama dan warna aksen melalui color picker.
+
+### Mode tampilan
+
+- Light Mode.
+- Dark Mode.
+- System Default.
+
+Perubahan tema harus langsung diterapkan dengan animasi transisi yang lembut.
+
+Pastikan semua teks, ikon, kartu, modal, dropdown, grafik, dan tombol tetap memiliki kontras yang baik di semua tema.
+
+Simpan pengaturan tema agar tetap sama ketika aplikasi dibuka kembali.
+
+### Pengaturan game
+
+- Aktifkan atau nonaktifkan suara.
+- Volume sound effect.
+- Aktifkan atau nonaktifkan musik latar.
+- Aktifkan atau nonaktifkan animasi.
+- Mode animasi sederhana.
+- Kecepatan transisi.
+- Umpan balik langsung.
+- Jeda otomatis antarsoal.
+- Tampilan timer vertikal.
+- Konfirmasi sebelum keluar dari quiz.
+- Preferensi jumlah soal dan durasi default.
+
+Musik latar harus nonaktif secara default sampai pengguna mengaktifkannya.
+
+## 14. Sistem Akun dan Sinkronisasi Data
+
+Saya ingin soal, kategori, riwayat, dan pengaturan dapat diakses melalui laptop, HP, dan tablet menggunakan akun Google yang sama.
+
+Gunakan sistem akun dengan autentikasi Google yang benar-benar berfungsi.
+
+Ketika pengguna login di laptop dan menambahkan soal, soal tersebut harus muncul di HP dan tablet setelah sinkronisasi berhasil.
+
+Gunakan arsitektur berikut:
+
+- Google Authentication untuk login.
+- Database cloud seperti Firebase Firestore atau layanan setara untuk menyimpan data pengguna.
+- Penyimpanan lokal menggunakan IndexedDB untuk cache dan akses yang lebih cepat.
+- Sinkronisasi perubahan antara penyimpanan lokal dan cloud.
+- Status sinkronisasi yang jelas.
+- Penanganan konflik jika data diubah dari dua perangkat sekaligus.
+
+Data setiap pengguna harus terisolasi dan tidak dapat diakses oleh akun lain.
+
+Simpan data seperti:
+
+- Akun pengguna.
+- Kategori.
+- Kumpulan quiz.
+- Soal dan kunci jawaban.
+- Pengaturan kategori.
+- Tema dan preferensi.
+- Riwayat quiz.
+- Statistik.
+- Pengaturan aplikasi.
+
+Jangan hanya menyimpan data di localStorage jika data harus tersinkronisasi lintas perangkat.
+
+### Sistem offline
+
+Jika memungkinkan, izinkan pengguna mengerjakan quiz dari soal yang sudah tersimpan di perangkat meskipun sedang offline.
+
+Simpan perubahan secara lokal, lalu sinkronkan ketika internet tersedia kembali.
+
+Tampilkan status seperti:
+
+- Online dan tersinkronisasi.
+- Offline.
+- Perubahan menunggu sinkronisasi.
+- Sinkronisasi gagal.
+
+Jangan menyatakan data sudah tersinkronisasi sebelum server mengonfirmasi penyimpanan.
+
+Sediakan opsi ekspor dan impor data sebagai cadangan.
+
+## 15. PWA — Bisa Diinstal sebagai Aplikasi
+
+Website harus dibuat sebagai Progressive Web App (PWA) sehingga pengguna dapat menginstalnya dari browser Chrome pada perangkat yang mendukung.
+
+Buat:
+
+- manifest.webmanifest yang valid.
+- Service worker.
+- Ikon aplikasi.
+- Nama aplikasi dan nama pendek.
+- Splash screen yang sesuai.
+- Tampilan standalone.
+- Theme color.
+- Background color.
+- Pengaturan cache untuk aset statis.
+- Halaman offline yang informatif.
+
+Sediakan tombol **Install QuizKu** pada halaman Pengaturan atau Beranda jika instalasi didukung oleh browser.
+
+Jangan menampilkan tombol instalasi palsu. Tangani kondisi browser yang tidak mendukung prompt instalasi dan berikan petunjuk instalasi manual jika diperlukan.
+
+### Logo website dan logo aplikasi
+
+Buat logo QuizKu berupa tanda tanya yang dikombinasikan dengan elemen quiz.
+
+Logo wajib memiliki desain dan bentuk yang konsisten di:
+
+- Header website.
+- Halaman loading.
+- Favicon.
+- Ikon PWA.
+- Ikon aplikasi pada layar utama.
+- Splash screen.
+- Ikon browser.
+
+Siapkan ikon PWA minimal ukuran 192×192 dan 512×512, termasuk varian maskable jika diperlukan.
+
+Gunakan file logo yang sama atau sumber desain yang sama untuk seluruh penggunaan. Atur padding dan safe area ikon agar bentuk tanda tanya tidak terpotong atau berubah ketika dipasang sebagai aplikasi.
+
+Jangan menggunakan emoji sebagai pengganti logo utama. Buat aset logo yang sebenarnya dan pastikan versi ikon aplikasi tetap konsisten dengan logo website.
+
+## 16. Animasi dan Efek Visual
+
+Animasi adalah bagian penting dari pengalaman QuizKu.
+
+Buat animasi seperti:
+
+- Maskot yang menyapa ketika Beranda dibuka.
+- Tombol PLAY yang memiliki efek hover dan press.
+- Kartu kategori yang bergerak sedikit ketika disentuh.
+- Transisi halaman yang halus.
+- Hitung mundur 3, 2, 1, GO!
+- Timer vertikal yang memendek dengan mulus.
+- Animasi hijau ketika jawaban benar.
+- Animasi merah ketika jawaban salah.
+- Efek konfeti saat mendapatkan hasil bagus.
+- Animasi bintang dan medali ketika mencapai skor terbaik.
+- Loading animation saat AI sedang bekerja.
+- Notifikasi toast yang muncul di tengah area aplikasi secara konsisten atau pada posisi yang tidak menutupi kontrol penting.
+- Animasi saat menyimpan soal.
+- Empty state yang menarik ketika belum ada quiz.
+
+Targetkan animasi yang terasa mulus hingga 60 FPS pada perangkat yang mendukung, tanpa menjanjikan frame rate tetap pada semua perangkat.
+
+Gunakan transformasi dan opacity untuk animasi yang ringan. Hindari animasi layout yang berat, efek blur berlebihan, dan proses yang menghambat interaksi.
+
+Gunakan prefers-reduced-motion untuk menghormati preferensi pengguna yang mengurangi animasi.
+
+Ukuran maskot, ikon, ilustrasi, dan elemen animasi harus proporsional dengan ruang yang tersedia. Jangan membuatnya terlalu kecil atau terlalu besar.
+
+## 17. Desain Responsif
+
+Website harus tampil baik di:
+
+- Laptop dan desktop.
+- Tablet.
+- HP Android.
+- Perangkat dengan layar kecil.
+- Mode portrait maupun landscape.
+
+Ketentuan:
+
+- Gunakan layout responsif.
+- Kartu kategori menyesuaikan lebar layar.
+- Tombol mudah ditekan dengan jari.
+- Teks soal tidak terlalu kecil.
+- Timer tidak menutupi pertanyaan atau opsi jawaban.
+- Modal tidak terpotong pada layar kecil.
+- Formulir soal tetap nyaman digunakan pada HP.
+- Sidebar desktop berubah menjadi navigasi ringkas pada HP.
+- Tidak ada horizontal overflow yang tidak diperlukan.
+- Pastikan keyboard virtual tidak menutupi kolom yang sedang diisi.
+- Pada layar sempit, timer vertikal dapat diposisikan di samping jika ruang cukup atau ditempatkan di area terpisah jika lebih nyaman.
+
+Jangan sekadar mengecilkan layout desktop untuk membuat versi mobile. Sesuaikan tata letak setiap komponen agar benar-benar nyaman digunakan pada perangkat tersebut.
+
+## 18. Halaman Tentang QuizKu
+
+Buat halaman Tentang yang sederhana, menarik, dan tidak terlalu panjang.
+
+Tampilkan:
+
+- Logo QuizKu.
+- Nama QuizKu.
+- Tagline "Play. Think. Level Up!"
+- Penjelasan singkat bahwa QuizKu merupakan aplikasi quiz edukasi yang membantu pengguna berlatih, membuat soal, mengelola kategori, dan memanfaatkan AI untuk mengembangkan soal.
+- Penjelasan singkat tentang penyimpanan dan sinkronisasi data.
+- Nomor versi aplikasi.
+- Tulisan **Web by Rasfarilmi**.
+
+Jangan menambahkan tulisan kredit yang tidak diminta atau mengubah tulisan "Web by Rasfarilmi".
+
+## 19. Fitur Tambahan yang Berguna
+
+Tambahkan fitur berikut jika dapat diimplementasikan dengan baik.
+
+### A. Favorite Quiz
+
+Pengguna dapat menandai kategori atau set quiz favorit agar lebih mudah ditemukan.
+
+### B. Mode Review Kesalahan
+
+QuizKu dapat mengumpulkan soal yang pernah dijawab salah dan menyediakan sesi latihan khusus untuk soal-soal tersebut.
+
+Pengguna dapat mengatur apakah ingin memasukkan soal salah dari satu kategori atau beberapa kategori.
+
+### C. Mode Acak
+
+Pengguna dapat mengaktifkan pengacakan urutan soal dan pilihan jawaban. Pengacakan tidak boleh mengubah kunci jawaban yang benar.
+
+### D. Mode Latihan dan Tantangan
+
+- Mode Latihan: pengguna dapat melihat jawaban benar setelah menjawab.
+- Mode Tantangan: pengguna mengerjakan quiz dengan batas waktu dan melihat hasil di akhir.
+- Mode Tanpa Timer: untuk latihan santai.
+
+### E. Target Harian
+
+Pengguna dapat menetapkan target jumlah soal yang ingin dikerjakan setiap hari dan melihat progresnya.
+
+### F. Sistem Pencapaian
+
+Buat achievement seperti:
+
+- First Quiz.
+- Perfect Score.
+- 100 Questions Completed.
+- Quiz Streak.
+- Master of Algebra.
+
+Pencapaian diberikan berdasarkan aktivitas nyata, bukan secara acak.
+
+### G. Impor Soal
+
+Sediakan impor soal dari JSON atau CSV dengan pratinjau dan validasi sebelum data ditambahkan.
+
+Jangan menjanjikan impor otomatis dari semua format dokumen jika parser untuk format tersebut belum tersedia.
+
+### H. Fitur Pencarian Global
+
+Pengguna dapat mencari kategori, set quiz, atau soal tertentu dari satu kolom pencarian.
+
+### I. Konfirmasi Tindakan Penting
+
+Gunakan modal konfirmasi yang konsisten sebelum menghapus kategori, menghapus banyak soal, menghapus riwayat, atau melakukan reset data.
+
+Jangan pernah menghapus seluruh data pengguna secara otomatis ketika melakukan pembaruan aplikasi.
+
+## 20. Teknologi dan Arsitektur
+
+Gunakan teknologi yang sesuai untuk membangun aplikasi web modern dan mudah dikembangkan.
+
+Rekomendasi:
+
+- Frontend: React dengan TypeScript.
+- Styling: Tailwind CSS atau sistem CSS modular yang konsisten.
+- Animasi: Framer Motion atau alternatif ringan.
+- Database cloud: Firebase Firestore atau layanan setara.
+- Autentikasi: Firebase Authentication dengan Google Sign-In.
+- Penyimpanan lokal: IndexedDB.
+- PWA: Web App Manifest dan Service Worker.
+- Backend: layanan serverless atau backend aman untuk integrasi AI.
+- Grafik: library grafik yang responsif dan mendukung aksesibilitas.
+
+Teknologi boleh disesuaikan jika ada pilihan yang lebih tepat, tetapi seluruh sistem harus benar-benar terintegrasi.
+
+Gunakan struktur kode modular, komponen yang dapat digunakan kembali, validasi data, penanganan error, dan pengelolaan state yang rapi.
+
+Jangan menyimpan API key AI atau kredensial sensitif di frontend.
+
+## 21. Ketentuan Penting Saat Membangun Website
+
+1. Bangun aplikasi yang benar-benar berfungsi, bukan sekadar mockup.
+2. Pastikan seluruh tombol memiliki fungsi yang sesuai.
+3. Jangan menggunakan data contoh sebagai pengganti data asli tanpa penjelasan.
+4. Pastikan soal, kategori, pengaturan, dan riwayat tersimpan dengan benar.
+5. Jangan mengubah jawaban benar ketika AI menghasilkan opsi tambahan.
+6. Pastikan timer tidak mengalami duplikasi atau kesalahan perhitungan.
+7. Pastikan hasil quiz sesuai dengan jawaban yang benar-benar dipilih pengguna.
+8. Pastikan sinkronisasi lintas perangkat benar-benar berjalan melalui database cloud.
+9. Pastikan fitur AI menggunakan layanan AI yang nyata dan memiliki penanganan error.
+10. Pastikan PWA dapat diinstal dan memiliki ikon yang konsisten.
+11. Jangan membuat tombol, statistik, grafik, atau fitur yang hanya terlihat aktif tetapi sebenarnya tidak berfungsi.
+12. Berikan loading state, empty state, error state, dan konfirmasi untuk tindakan penting.
+13. Jangan menghapus data ketika aplikasi diperbarui.
+14. Jangan menimpa data cloud dengan data lokal yang sudah kedaluwarsa.
+15. Pastikan aplikasi tetap cepat, ringan, dan responsif.
+
+## 22. Pengujian Sebelum Website Selesai
+
+Lakukan pengujian pada skenario berikut:
+
+- Membuat kategori baru.
+- Menambah soal beserta kunci jawaban.
+- Meminta AI membuat opsi jawaban.
+- Meminta AI membuat soal serupa.
+- Mengedit dan menghapus soal.
+- Menjalankan quiz dengan hitung mundur.
+- Menguji jawaban benar, salah, dan waktu habis.
+- Memastikan timer di-reset pada setiap soal.
+- Memastikan perhitungan skor benar.
+- Memastikan review jawaban sesuai dengan hasil.
+- Memastikan data tetap tersimpan setelah halaman ditutup.
+- Memastikan data akun tersinkronisasi dari laptop ke HP.
+- Menguji kondisi offline dan sinkronisasi kembali.
+- Menguji mode terang dan gelap.
+- Menguji responsivitas layar HP, tablet, dan laptop.
+- Menguji instalasi PWA serta konsistensi logo aplikasi.
+- Menguji kondisi error ketika database atau AI tidak tersedia.
+
+Perbaiki setiap bug yang ditemukan sebelum menyatakan aplikasi selesai.
+
+## HASIL AKHIR YANG SAYA INGINKAN
+
+Buat QuizKu sebagai aplikasi game quiz edukasi yang modern, seru, lucu, responsif, dan profesional. Saya ingin bisa membuka website, menekan PLAY, memilih kategori, menjalani hitung mundur, mengerjakan soal dengan timer vertikal, mendapat respons benar atau salah secara langsung, dan melihat nilai akhir.
+
+Saya juga ingin memiliki kendali penuh untuk membuat kategori, menambah dan mengedit soal, mengatur durasi, menentukan jawaban benar, serta menggunakan AI untuk menghasilkan opsi jawaban dan membuat soal baru yang mirip dengan soal sebelumnya.
+
+Semua data penting harus tersimpan dengan aman, dapat disinkronkan menggunakan akun Google yang sama di berbagai perangkat, dan website dapat diinstal sebagai aplikasi PWA dengan logo yang sama persis dengan identitas QuizKu.
+
+Prioritaskan pengalaman pengguna, kestabilan fitur, desain yang menarik, animasi halus, keamanan data, dan kemudahan penggunaan.
+
+**Mulai dengan membangun aplikasi secara menyeluruh, kemudian uji seluruh fitur hingga berfungsi. Jangan berhenti hanya pada halaman depan atau desain visual.**

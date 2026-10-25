@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="50%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    
+    <!-- Question Mark Gradient -->
+    <linearGradient id="qGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FDE047" />
+    </linearGradient>
+    
+    <!-- Card Back Gradient -->
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="dropGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Container / App Icon Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="26" y="26" width="460" height="460" rx="110" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="4" />
+
+  <!-- Background Quiz Card 1 (Tilted Left) -->
+  <g transform="rotate(-14 256 256)" filter="url(#dropGlow)">
+    <rect x="156" y="110" width="180" height="230" rx="28" fill="url(#cardGrad1)" stroke="#FFFFFF" stroke-width="5" />
+    <!-- Mini quiz options lines -->
+    <rect x="176" y="145" width="140" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.8" />
+    <rect x="176" y="175" width="110" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.6" />
+    <rect x="176" y="200" width="125" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.6" />
+    <!-- Checkmark badge on card -->
+    <circle cx="280" cy="270" r="22" fill="#FFFFFF" />
+    <path d="M270 270 l7 7 l14 -14" fill="none" stroke="#EF4444" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Background Quiz Card 2 (Tilted Right) -->
+  <g transform="rotate(12 256 256)" filter="url(#dropGlow)">
+    <rect x="176" y="125" width="180" height="230" rx="28" fill="url(#cardGrad2)" stroke="#FFFFFF" stroke-width="5" />
+    <rect x="196" y="160" width="140" height="12" rx="6" fill="#FFFFFF" fill-opacity="0.8" />
+    <rect x="196" y="190" width="120" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.6" />
+    <rect x="196" y="215" width="90" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.6" />
+    <!-- Star on card -->
+    <path d="M266 260 l3.5 7.5 8 1.2 -5.8 5.6 1.4 8 -7.1 -3.8 -7.1 3.8 1.4 -8 -5.8 -5.6 8 -1.2 z" fill="#FDE047" stroke="#059669" stroke-width="2" />
+  </g>
+
+  <!-- Foreground Mascot Question Mark with 3D Depth & Glow -->
+  <g filter="url(#dropGlow)">
+    <!-- 3D Shadow layer -->
+    <path d="M210 185 C210 145 235 120 275 120 C315 120 345 145 345 180 C345 210 325 230 295 245 C270 260 260 275 260 305 L260 315 L220 315 L220 300 C220 265 235 245 265 230 C285 220 300 205 300 185 C300 165 285 152 265 152 C245 152 235 165 230 185 Z" fill="#312E81" transform="translate(0, 10)" />
+    
+    <!-- Main Question Mark Body -->
+    <path d="M210 185 C210 145 235 120 275 120 C315 120 345 145 345 180 C345 210 325 230 295 245 C270 260 260 275 260 305 L260 315 L220 315 L220 300 C220 265 235 245 265 230 C285 220 300 205 300 185 C300 165 285 152 265 152 C245 152 235 165 230 185 Z" fill="url(#qGrad)" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round" />
+    
+    <!-- Question Mark Dot as a Golden Star or Glowing Gem -->
+    <g transform="translate(240, 345)">
+      <!-- Star dot -->
+      <path d="M16 2 L21 12 L32 13.5 L24 21.5 L26 32 L16 26.5 L6 32 L8 21.5 L0 13.5 L11 12 Z" fill="#FDE047" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" transform="scale(1.4) translate(-4, -4)" />
+    </g>
+  </g>
+
+  <!-- Sparkle stars surrounding QuizKu -->
+  <!-- Sparkle 1 Top Right -->
+  <path d="M410 95 Q410 115 425 120 Q410 125 410 145 Q410 125 395 120 Q410 115 410 95 Z" fill="#FDE047" />
+  <!-- Sparkle 2 Top Left -->
+  <path d="M100 110 Q100 125 110 130 Q100 135 100 150 Q100 135 90 130 Q100 125 100 110 Z" fill="#38BDF8" />
+  <!-- Sparkle 3 Bottom Left -->
+  <path d="M90 370 Q90 385 102 390 Q90 395 90 410 Q90 395 78 390 Q90 385 90 370 Z" fill="#FDE047" />
+  <!-- Sparkle 4 Bottom Right -->
+  <path d="M420 380 Q420 392 430 395 Q420 398 420 410 Q420 398 410 395 Q420 392 420 380 Z" fill="#34D399" />
+</svg>
